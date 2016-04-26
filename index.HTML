@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>BibleThump</title>
+		</style>
+	</head>
+	<body onload="sak3()">
+		<button onmousedown="sak1()">dank</button>
+		<p id="sak1">( ͡° ͜ʖ ͡°)</p>
+		<button onmousedown="sak2()">nummer</button>
+		<p id="sak2">nummer</p>
+		<button id="sak5" onmousedown="sak5()"> ruta</button>
+		<p id="r"></p>
+		<p id="g"></p>
+		<p id="b"></p>
+		<p id="time"></p>
+		<script type="text/javascript">
+			function sak1(){
+				setTimeout(function(){document.getElementById("sak1").innerHTML = "Ge";}, 2000);
+				setTimeout(function(){document.getElementById("sak1").innerHTML = "Hello World";}, 2150);
+				setTimeout(function(){document.getElementById("sak1").innerHTML = "Mig";}, 2400);
+				setTimeout(function(){document.getElementById("sak1").innerHTML = "Hello World";}, 2550);
+				setTimeout(function(){document.getElementById("sak1").innerHTML = "Ett A";}, 2800);
+				setTimeout(function(){document.getElementById("sak1").innerHTML = "Hello World";}, 2950);
+				setTimeout(function(){document.getElementById("sak1").innerHTML = "( ͡° ͜ʖ ͡°)";}, 3500);
+
+			}
+			var XY = 0
+			function sak2(){
+				XY ++;
+				document.getElementById("sak2").innerHTML= XY;
+			}
+			function sak3(){
+				setInterval(function(){
+					sak4()
+				}, 100);
+			}
+			var r = 255;
+			var g = 255;
+			var b = 255;
+			function sak4(){
+				document.getElementById("r").innerHTML= "R=" + r;
+				document.getElementById("g").innerHTML= "G=" + g;
+				document.getElementById("b").innerHTML= "B=" + b;
+				document.body.style.backgroundColor= "rgb(" + r + "," + g + "," + b + ")";
+				if (r > 0) {
+					r--;
+				} else if(r == 0){
+					r=255;
+					if (g > 0) {
+						g--;
+					} else if(g == 0){
+						g=255;
+						if (b > 0) {
+							b--;
+						} else if (b==0) {
+							b=255;
+						}
+
+					}
+				}
+			}
+			function sak5(){
+				document.body.style.backgroundColor= "rgb(" + r + "," + g + "," + b + ")";
+				r--;
+			}
+		</script>
+	</body>	
+</HTML>
